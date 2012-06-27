@@ -1,0 +1,391 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+
+    <meta name="Description" content="" />
+    <meta name="Keywords" content="" />
+    <meta name="Author" content="Igor Rzegocki" />
+    <meta name="Copyright" content="Copyright (c) 2011 Igor Rzegocki" />
+
+    <meta name="Robots" content="index, follow" />
+    <meta name="Revisit-after" content="7 days" />
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link href="css/fraxi.css" media="screen" rel="Stylesheet" type="text/css" />
+    <!--[if lt IE 8]>
+      <link href="css/fraxi-ie6.css" media="screen" rel="Stylesheet" type="text/css" />
+    <![endif]-->
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.i18n.js"></script>
+    <script type="text/javascript" src="js/jquery.datepicker.js"></script>
+    <script type="text/javascript" src="js/fraxi.js"></script>
+</head>
+<body class="main3">
+    <form action="" method="post">
+        <div id="wrapper">
+            <div id="top">
+                <ul id="menu" class="pipes">
+                    <li><a href="">Edytuj profil</a></li>
+                    <li><a href="">Wyloguj</a></li>
+                </ul>
+                <div id="logo"><a href="/">Fraxi.pl</a></div>
+                <ul id="tabs">
+                    <li class="first"><a href="">Fraxiparine</a></li>
+                    <li><a href="">Fraxiparine Multi</a></li>
+                    <li><a href="">Fraxodi</a></li>
+                    <li><a href="">Projekty edukacyjne</a></li>
+                    <li><a href="">Wytyczne terapeutyczne</a></li>
+                    <li class="last"><a href="">Materiały edukacyjne</a></li>
+                </ul>
+            </div>
+            <div id="content">
+                <div class="column-left">
+                    <h2>Zgłoś zdarzenie niepożądane</h2>
+                    <ul class="breadcrumbs">
+                        <li><a href="">Fraxi.pl</a></li>
+                        <li><a href="">Zgłoś zdarzenie niepożądane</a></li>
+                    </ul>
+                    <div class="form">
+                        <h3 class="first">Osoba zgłaszająca działanie niepożądane</h3>
+                        <dl class="form">
+                            <dt><label for="job"><span class="req">*</span> Zawód</label></dt>
+                            <dd>
+                                <div class="select">
+                                    <span></span>
+                                    <select name="job" id="job">
+                                        <option value="doctor">Lekarz</option>
+                                    </select>
+                                </div>
+                            </dd>
+                            <dt><label for="name"><span class="req">*</span> Imię</label></dt>
+                            <dd><input type="text" name="name" id="name" class="text" /><span class="info">Proszę podać imię</span></dd>
+                            <dt><label for="surname"><span class="req">*</span> Nazwisko</label></dt>
+                            <dd><input type="text" name="surname" id="surname" class="text" /><span class="info">Proszę podać nazwisko</span></dd>
+                            <dt><label for="email"><span class="req">*</span> E-mail</label></dt>
+                            <dd><input type="text" name="email" id="email" class="text" /><span class="info">Proszę podać poprawny adres email</span></dd>
+                        </dl>
+                        <h3>Informacje o pacjencie</h3>
+                        <dl class="form">
+                            <dt><label for="gender"><span class="req">*</span> Płeć</label></dt>
+                            <dd>
+                                <div class="select">
+                                    <span></span>
+                                    <select name="gender" id="gender">
+                                        <option value="">Wybierz</option>
+                                        <option value="m">Mężczyzna</option>
+                                        <option value="f">Kobieta</option>
+                                    </select>
+                                </div>
+                            </dd>
+                            <dt class="free"><label for="birthday">Data urodzenia</label></dt>
+                            <dd>
+                                <input type="text" name="birthday" id="birthday" class="text cal" />
+                                <a class="calendar" href="javascript:void(0)">Kalendarz</a>
+                            </dd>
+                            <dt class="free"><label for="age">Wiek pacjenta</label></dt>
+                            <dd><input type="text" name="age" id="age" class="text" /></dd>
+                            <dt class="free"><label for="initial">Inicjały pacjenta</label></dt>
+                            <dd><input type="text" name="initial" id="initial" class="text" /></dd>
+                            <dt class="free"><label for="race">Rasa</label></dt>
+                            <dd>
+                                <div class="select">
+                                    <span></span>
+                                    <select name="race" id="race">
+                                        <option value="">Wybierz</option>
+                                    </select>
+                                </div>
+                            </dd>
+                        </dl>
+                        <h3>Informacje o leku</h3>
+                        <dl class="form">
+                            <dt><label for="product"><span class="req">*</span> Produkt</label></dt>
+                            <dd>
+                                <div class="select">
+                                    <span></span>
+                                    <select name="product" id="product">
+                                        <option value="fraxi">Fraxi</option>
+                                    </select>
+                                </div>
+                            </dd>
+                            <dt><label for="series"><span class="req">*</span> Nr serii produktu</label></dt>
+                            <dd><input type="text" name="series" id="series" class="text" /><span class="info">Proszę podać nr serii</span></dd>
+                            <dt><label for="desc"><span class="req">*</span> Opis zdarzenia</label></dt>
+                            <dd class="textarea"><textarea name="desc" id="desc" rows="6" cols="60"></textarea></dd>
+                            <dt><label for="from-from"><span class="req">*</span> Lek stosowany od</label></dt>
+                            <dd>
+                                <input type="text" name="from-from" id="from-from" class="text short" /><span class="short"> - </span>
+                                <input type="text" name="from-to" id="from-to" class="text short" />
+                                <a class="calendar" href="javascript:void(0)">Kalendarz</a>
+                                <span class="info">Proszę podać zakres czasowy</span>
+                            </dd>
+                            <dt><label for="period-from"><span class="req">*</span> Zakres czasowy</label></dt>
+                            <dd>
+                                <input type="text" name="period-from" id="period-from" class="text short" /><span class="short"> - </span>
+                                <input type="text" name="period-to" id="period-to" class="text short" />
+                                <a class="calendar" href="javascript:void(0)">Kalendarz</a>
+                                <span class="info">Proszę podać zakres czasowy</span>
+                            </dd>
+                            <dt><label for="amount"><span class="req">*</span> Dawka leku</label></dt>
+                            <dd><input type="text" name="amount" id="amount" class="text" /><span class="info">Proszę podać dawkę</span></dd>
+                            <dt><label for="way"><span class="req">*</span> Droga dawkowania</label></dt>
+                            <dd>
+                                <div class="select">
+                                    <span></span>
+                                    <select name="way" id="way">
+                                        <option value="mouth">Doustnie</option>
+                                    </select>
+                                </div>
+                            </dd>
+                        </dl>
+                        <p>Informacje podanie w formularzu nie są w żaden sposób gromadzone i nie
+                        będą wykorzystywane w celu innym, niż realizacja tej usługi.</p>
+                        <p>Wyrażam zgodę na wykorzystanie informacji wskazanych przeze mnie w treści
+                        powyższego formularza, tylko i wyłącznie w celu realizacji tej usługi.
+                        Oświadczem jednocześnie, że zapoznałem się z regulaminem serwisu i w pełni
+                        akceptuję jego postanowienia.</p>
+                        <cite>* pola wymagane</cite>
+                        <button type="submit" name="send" class="submit"><div>Wyślij pytanie</div></button>
+                    </div>
+                </div>
+                <div class="column-right">
+                    <div class="ad">
+                        <a href="">Fraxiparine - nadroparyna wapniowa, Skala Capriniego on-line skorzystaj już teraz</a>
+                    </div>
+                    <h2>Kalendarz kongresów</h2>
+                    <div class="cal">
+                        <div class="calendars">
+                            <div class="c-left">
+                                <h4>Styczeń - 2011</h4>
+                                <ul class="cal-nav">
+                                    <li class="prev"><a href="#">&lt;</a></li>
+                                    <li class="next"><a href="#">&gt;</a></li>
+                                </ul>
+                                <table class="calendar">
+                                    <thead>
+                                        <tr>
+                                            <th>Pon</th>
+                                            <th>Wto</th>
+                                            <th>Śro</th>
+                                            <th>Czw</th>
+                                            <th>Pią</th>
+                                            <th>Sob</th>
+                                            <th>Nie</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="empty"><a href=""></a></td>
+                                            <td><a href="">1</a></td>
+                                            <td><a href="">2</a></td>
+                                            <td><a href="">3</a></td>
+                                            <td><a href="">4</a></td>
+                                            <td><a href="">5</a></td>
+                                            <td><a href="">6</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="">7</a></td>
+                                            <td><a href="">8</a></td>
+                                            <td class="marked"><a href="">9</a></td>
+                                            <td><a href="">10</a></td>
+                                            <td><a href="">11</a></td>
+                                            <td><a href="">12</a></td>
+                                            <td><a href="">13</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="">14</a></td>
+                                            <td><a href="">15</a></td>
+                                            <td><a href="">16</a></td>
+                                            <td><a href="">17</a></td>
+                                            <td class="marked"><a href="">18</a></td>
+                                            <td><a href="">19</a></td>
+                                            <td><a href="">20</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="">21</a></td>
+                                            <td><a href="">22</a></td>
+                                            <td><a href="">23</a></td>
+                                            <td><a href="">24</a></td>
+                                            <td><a href="">25</a></td>
+                                            <td><a href="">26</a></td>
+                                            <td><a href="">27</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="">28</a></td>
+                                            <td class="empty"><a href=""></a></td>
+                                            <td class="empty"><a href=""></a></td>
+                                            <td class="empty"><a href=""></a></td>
+                                            <td class="empty"><a href=""></a></td>
+                                            <td class="empty"><a href=""></a></td>
+                                            <td class="empty"><a href=""></a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <a class="cal-more" href="">Zobacz wszystkie wydarzenia w tym miesiącu &raquo;</a>
+                            </div>
+                            <div class="c-left">
+                                <h4>Luty - 2011</h4>
+                                <ul class="cal-nav">
+                                    <li class="prev"><a href="#">&lt;</a></li>
+                                    <li class="next"><a href="#">&gt;</a></li>
+                                </ul>
+                                <table class="calendar">
+                                    <thead>
+                                        <tr>
+                                            <th>Pon</th>
+                                            <th>Wto</th>
+                                            <th>Śro</th>
+                                            <th>Czw</th>
+                                            <th>Pią</th>
+                                            <th>Sob</th>
+                                            <th>Nie</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="empty"><a href=""></a></td>
+                                            <td><a href="">1</a></td>
+                                            <td><a href="">2</a></td>
+                                            <td><a href="">3</a></td>
+                                            <td><a href="">4</a></td>
+                                            <td><a href="">5</a></td>
+                                            <td><a href="">6</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="">7</a></td>
+                                            <td><a href="">8</a></td>
+                                            <td class="marked"><a href="">9</a></td>
+                                            <td><a href="">10</a></td>
+                                            <td><a href="">11</a></td>
+                                            <td><a href="">12</a></td>
+                                            <td><a href="">13</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="">14</a></td>
+                                            <td><a href="">15</a></td>
+                                            <td><a href="">16</a></td>
+                                            <td><a href="">17</a></td>
+                                            <td class="marked"><a href="">18</a></td>
+                                            <td><a href="">19</a></td>
+                                            <td><a href="">20</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="">21</a></td>
+                                            <td><a href="">22</a></td>
+                                            <td><a href="">23</a></td>
+                                            <td><a href="">24</a></td>
+                                            <td><a href="">25</a></td>
+                                            <td><a href="">26</a></td>
+                                            <td><a href="">27</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="">28</a></td>
+                                            <td class="empty"><a href=""></a></td>
+                                            <td class="empty"><a href=""></a></td>
+                                            <td class="empty"><a href=""></a></td>
+                                            <td class="empty"><a href=""></a></td>
+                                            <td class="empty"><a href=""></a></td>
+                                            <td class="empty"><a href=""></a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <a class="cal-more" href="">Zobacz wszystkie wydarzenia w tym miesiącu &raquo;</a>
+                            </div>
+                            <div class="c-left">
+                                <h4>Marzec - 2011</h4>
+                                <ul class="cal-nav">
+                                    <li class="prev"><a href="#">&lt;</a></li>
+                                    <li class="next"><a href="#">&gt;</a></li>
+                                </ul>
+                                <table class="calendar">
+                                    <thead>
+                                        <tr>
+                                            <th>Pon</th>
+                                            <th>Wto</th>
+                                            <th>Śro</th>
+                                            <th>Czw</th>
+                                            <th>Pią</th>
+                                            <th>Sob</th>
+                                            <th>Nie</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="empty"><a href=""></a></td>
+                                            <td><a href="">1</a></td>
+                                            <td><a href="">2</a></td>
+                                            <td><a href="">3</a></td>
+                                            <td><a href="">4</a></td>
+                                            <td><a href="">5</a></td>
+                                            <td><a href="">6</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="">7</a></td>
+                                            <td><a href="">8</a></td>
+                                            <td class="marked"><a href="">9</a></td>
+                                            <td><a href="">10</a></td>
+                                            <td><a href="">11</a></td>
+                                            <td><a href="">12</a></td>
+                                            <td><a href="">13</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="">14</a></td>
+                                            <td><a href="">15</a></td>
+                                            <td><a href="">16</a></td>
+                                            <td><a href="">17</a></td>
+                                            <td class="marked"><a href="">18</a></td>
+                                            <td><a href="">19</a></td>
+                                            <td><a href="">20</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="">21</a></td>
+                                            <td><a href="">22</a></td>
+                                            <td><a href="">23</a></td>
+                                            <td><a href="">24</a></td>
+                                            <td><a href="">25</a></td>
+                                            <td><a href="">26</a></td>
+                                            <td><a href="">27</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="">28</a></td>
+                                            <td class="empty"><a href=""></a></td>
+                                            <td class="empty"><a href=""></a></td>
+                                            <td class="empty"><a href=""></a></td>
+                                            <td class="empty"><a href=""></a></td>
+                                            <td class="empty"><a href=""></a></td>
+                                            <td class="empty"><a href=""></a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <a class="cal-more" href="">Zobacz wszystkie wydarzenia w tym miesiącu &raquo;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a id="cal-link" href="">Zobacz wszystkie wydarzenia w tym miesiącu &raquo;</a>
+                </div>
+            </div>
+            <div id="push"></div>
+        </div>
+        <div id="footer">
+            <ul class="pipes">
+                <li><a href="">Zgłoś zdarzenie niepożądane</a></li>
+                <li><a href="">Zamów wizytę przedstawiciela</a></li>
+                <li><a href="">Nota prawna</a></li>
+                <li><a href="">Regulamin</a></li>
+                <li><a href="">Kontakt</a></li>
+            </ul>
+            <div class="footer">
+                <div class="content">
+                    <address>
+                        <span>Projekt i realizacja <a href="">Active Pharma</a></span>
+                        Copyright &copy; 2010 GSK Commercial Sp. z o.o.
+                    </address>
+                    <a class="gsk" href="">GlaxoSmithKline</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

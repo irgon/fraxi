@@ -1,0 +1,1584 @@
+/* reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, input, select, button
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border: none;
+    list-style: none;
+}
+
+a, a:visited, a.oposite:hover {
+    text-decoration: none;
+    color: #990000;
+}
+
+a:hover, a.oposite {
+    text-decoration: underline;
+}
+
+address, cite {
+    font-style: normal;
+}
+
+address strong {
+    display: block;
+}
+
+sup,
+sub {
+    height: 0;
+    line-height: 1;
+    vertical-align: baseline;
+    _vertical-align: bottom;
+    position: relative;
+}
+
+sup {
+    bottom: 1ex;
+}
+
+sub {
+    top: .5ex;
+}
+
+.nobg {
+    background: none !important;
+}
+
+@font-face {
+    font-family: MyriadPro;
+    src: url(../fonts/myriadpro-cond-webfont.eot);
+}
+
+@font-face {
+    font-family: MyriadPro;
+    src: url(../fonts/myriadpro-cond-webfont.ttf);
+}
+
+@font-face {
+    font-family: MyriadPro;
+    src: url(../fonts/myriadpro-boldcond-webfont.eot);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: MyriadPro;
+    src: url(../fonts/myriadpro-boldcond-webfont.ttf);
+    font-weight: bold;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+button::-moz-focus-inner {
+    border: 0 none;
+    padding: 0;
+}
+
+button {
+    box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -ms-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+}
+
+/* button */
+button.big,
+a.big,
+button.submit,
+a.submit {
+    display: block;
+    height: 27px;
+    line-height: 27px;
+    padding: 0 5px 0 0;
+    background: url(../img/button-right.png) no-repeat;
+    background-position: right top;
+    margin: 0;
+    float: left;
+    border: none;
+    white-space: nowrap;
+}
+
+button.big:hover,
+a.big:hover {
+    background-position: right -29px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+button.submit:hover,
+a.submit:hover {
+    background-position: right -27px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+button.big div,
+a.big span,
+button.submit div,
+a.submit span {
+    display: block;
+    padding: 0 10px 0 15px;
+    text-align: center;
+    background: url(../img/button-left.png) no-repeat;
+    height: 27px;
+    line-height: 27px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: normal;
+    font-weight: bold;
+}
+
+button.big:hover div,
+a.big:hover span {
+    background-position: left -29px;
+}
+
+button.submit:hover div,
+a.submit:hover span {
+    background-position: left -27px;
+}
+
+button.big,
+a.big {
+    height: 29px;
+    line-height: 29px;
+    background: url(../img/bigbutton-right.png) no-repeat;
+    background-position: right top;
+    padding: 0 10px 0 0;
+}
+
+button.big div,
+a.big span {
+    height: 29px;
+    line-height: 29px;
+    background: url(../img/bigbutton-left.png) no-repeat;
+    background-position: left top;
+    padding: 0 15px 0 25px;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: normal;
+    font-family: MyriadPro, Arial, Helvetica, sans-serif;   
+}
+/* input */
+
+input.text {
+    width: 185px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    padding: 0 9px;
+    background: url(../img/input.png) no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #065452;
+}
+
+input.short {
+    width: 86px;
+    padding: 0 5px;
+    background: url(../img/input-short.png) no-repeat;
+}
+
+textarea {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input:focus {
+    background-position: left -25px;
+}
+
+/* breadcrumbs */
+ul.breadcrumbs li {
+    display: inline;
+}
+
+ul.breadcrumbs li:before {
+    content: " / ";
+}
+
+ul.breadcrumbs li:first-child:before {
+    content: "";
+}
+
+/* list */
+ul.list {
+    margin: 0 0 0 20px;
+}
+
+ul.list li {
+    list-style: disc;
+}
+
+/* piped list */
+ul.pipes {
+    white-space: nowrap;
+}
+
+ul.pipes li {
+    display: inline;
+    white-space: nowrap;
+}
+
+ul.pipes li:before {
+    content: " | ";
+}
+
+ul.pipes li a {
+    padding: 0 12px;
+    white-space: nowrap;
+}
+
+ul.pipes li:first-child:before {
+    content: "";
+}
+
+ul.pipes li:first-child a {
+    padding: 0 12px 0 0;
+}
+
+/* pager */
+ul.pager li {
+    width: 26px;
+    height: 26px;
+    float: left;
+    margin: 0 9px 0 0;
+    text-align: center;
+    line-height: 26px;
+}
+
+ul.pager li a {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border: solid 1px;
+    background: #ffffff;
+    text-align: center;
+    line-height: 24px;
+}
+
+/* logo */
+#top #logo {
+    float: left;
+}
+#top #logo,
+#top #logo a {
+    background: url(../img/logo.png) no-repeat;
+    display: block;
+    overflow: hidden;
+    text-indent: -1000em;
+}
+
+/* tabs */
+#tabs {
+    float: right;
+    clear: right;
+}
+
+#tabs li {
+    float: left;
+}
+
+#tabs li a {
+    display: block;
+    font-family: MyriadPro, Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 0 19px;
+}
+
+#tabs li a {
+    background: url(../img/tabs.png) no-repeat;
+    background-position: -100px top;
+}
+
+#tabs li.selected a,
+#tabs li a:hover {
+    background-position: -100px -100px;
+    text-decoration: none;
+}
+
+#tabs li.first a {
+    background-position: left top;
+}
+
+#tabs li.first-selected a,
+#tabs li.first a:hover {
+    background-position: left -100px;
+}
+
+#tabs li.last a {
+    background-position: right top;
+}
+
+#tabs li.last-selected a,
+#tabs li.last a:hover {
+    background-position: right -100px;
+}
+
+/* columns */
+div.column-left,
+div.left {
+    float: left;
+}
+
+div.column-right,
+div.right {
+    float: right;
+}
+
+/* form */
+dl.form {
+    overflow: hidden;
+}
+
+dl.form dt,
+dl.form dd {
+    height: 25px;
+    margin: 0 0 2px;
+    float: left;
+    line-height: 25px;
+}
+
+dl.form dt {
+    width: 145px;
+    clear: left;
+    padding: 6px 0;
+    line-height: 25px;
+}
+
+dl.form dt.free {
+    padding: 6px 0 6px 8px;
+    width: 137px;
+}
+
+dl.form dt label {
+    color: #333333;
+}
+
+dl.form dt span.req {
+    color: #065452;
+}
+
+dl.form dd {
+    padding: 6px;
+    width: 463px;
+}
+
+#login dl.form dd {
+    width: 427px;
+}
+
+dl.form dd.below,
+dl.form dd.textarea {
+    height: auto;
+}
+
+dl.form dd.textarea textarea {
+    width: 445px;
+    height: 167px;
+    min-width: 453px;
+    mih-height: 167px;
+    max-width: 453px;
+    max-height: 167px;
+    padding: 9px;
+    border: none;
+    background: url(../img/textarea.png) no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #333333;
+    resize: none;
+}
+
+dl.form dd.textarea textarea:focus {
+    background-position: left -185px;
+}
+
+dl.form dd input.text {
+    width: 185px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    padding: 0 9px;
+    background: url(../img/input.png) no-repeat;
+    margin: 0 14px 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #333333;
+}
+
+dl.form dd input.short {
+    width: 86px;
+    padding: 0 5px;
+    background: url(../img/input-short.png) no-repeat;
+    margin: 0;
+}
+
+dl.form dd input.default-value {
+    color: #aaaaaa;
+}
+
+dl.form dd input.longtext {
+    width: 445px;
+    background: url(../img/longinput.png) no-repeat;
+}
+
+dl.form dd input:focus {
+    background-position: left -25px;
+}
+
+#login dl.form dd.invalid {
+    background: url(../img/form-invalid-login.png) no-repeat;
+}
+
+dl.form dd.invalid {
+    background: url(../img/form-invalid.png) no-repeat;
+}
+
+dl.form dd.invalid-below {
+    background: url(../img/form-invalid-below.png) no-repeat;
+}
+
+dl.form dd.invalid input.text {
+    background-position: left -50px;
+}
+
+dl.form dd.invalid-textarea {
+    background: url(../img/form-invalid-textarea.png) no-repeat;
+}
+
+dl.form dd.invalid-below input.text {
+    background-position: left -50px;
+    margin: 0 0 5px;
+}
+
+dl.form dd.invalid-textarea textarea {
+    background-position: left -370px;
+    margin: 0 0 5px;
+}
+
+dl.form dd.invalid span.info,
+dl.form dd.invalid-textarea span.info,
+dl.form dd.invalid-below span.info {
+    display: inline;
+    color: #065452;
+    _clear: left;
+    _zoom: 1;
+}
+
+dl.form dd.invalid-textarea span.info,
+dl.form dd.invalid-below span.info {
+    margin: 5px 0 0 0;
+}
+
+dl.form dd span.info {
+    display: none;
+}
+
+dl.form dd input.cal,
+dl.form dd .short {
+    float: left;
+    margin: 0;
+}
+
+dl.form dd span.short {
+    padding: 0 3px;
+    display: block;
+}
+
+.form button.submit {
+    margin: 0 0 0 151px;
+}
+
+.form cite {
+    display: block;
+    font-size: 12px;
+    color: #333333;
+    float: left;
+    margin: 0 0 0 20px;
+}
+
+.form cite a {
+    display: block;
+}
+
+dl.form a.calendar {
+    display: block;
+    width: 14px;
+    height: 14px;
+    text-indent: -1000em;
+    overflow: hidden;
+    background: url(../img/calendar.png) no-repeat;
+    float: left;
+    margin: 5px;
+}
+
+/* select */
+div.select,
+div.select span {
+    position: relative;
+    width: 202px;
+    height: 25px;
+    overflow: hidden;
+    display: block;
+    color: #065452;
+}
+
+#wrapper #content div.select span {
+    background: url(../img/select.png) no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    line-height: 25px;
+    padding: 0 9px;
+    width: 192px;
+    font-size: 12px;
+    color: #333333;
+}
+
+#wrapper #content div.select span cite {
+    display: block;
+    font-size: 11px;
+    color: #999999;
+    font-weight: normal;
+    line-height: normal;
+    margin: -2px 0 0;
+}
+
+div.select select {
+    position: absolute;
+    top: 0;
+    width: 202px;
+    height: 25px;
+    opacity: 0;
+    filter: alpha(opacity=0.01);
+}
+
+body.main2 #wrapper #content div.select,
+body.main2 #wrapper #content div.select span {
+    height: 39px;
+    width: 228px;
+    cursor: pointer;
+}
+
+body.main2 #wrapper #content div.select span {
+    padding: 0 5px;
+    font-weight: bold;
+    color: #990000;
+    background: url(../img/select-main.png) no-repeat;
+    width: 218px;
+}
+
+body.main2 #wrapper #content div.select-hover span {
+    background-position: left -39px;
+}
+
+body.main2 #wrapper #content div.select select {
+    width: 228px;
+    height: 39px;
+    cursor: pointer;
+}
+
+/* calendars */
+div.calendars div.c-left {
+    position: relative;
+    float: left;
+}
+
+div.calendars h4 {
+    position: absolute;
+    display: block;
+    text-align: center;
+    height: 26px;
+    line-height: 26px;
+    width: 174px;
+    left: 66px;
+}
+
+div.ui-datepicker-header,
+ul.cal-nav {
+    overflow: hidden;
+    margin: 0 0 8px 0;
+}
+
+div.ui-datepicker-header a,
+ul.cal-nav li {
+    float: left;
+}
+
+div.ui-datepicker-header a,
+ul.cal-nav li a {
+    display: block;
+    width: 66px;
+    height: 26px;
+    text-indent: -1000em;
+    overflow: hidden;
+    background: url(../img/calendar-nav.png) no-repeat;
+}
+
+div.ui-datepicker-header a.ui-datepicker-prev,
+ul.cal-nav li.prev {
+    float: left;
+}
+
+div.ui-datepicker-header a.ui-datepicker-next,
+ul.cal-nav li.next {
+    float: right;
+}
+
+div.ui-datepicker-header a.ui-datepicker-prev,
+ul.cal-nav li.prev a {
+    background-position: 0px 0px;
+}
+
+div.ui-datepicker-header a.ui-datepicker-prev:hover,
+ul.cal-nav li.prev a:hover {
+    background-position: 0px -50px;
+}
+
+div.ui-datepicker-header a.ui-datepicker-next,
+ul.cal-nav li.next a {
+    background-position: -200px 0px;
+}
+
+div.ui-datepicker-header a.ui-datepicker-next:hover,
+ul.cal-nav li.next a:hover {
+    background-position: -200px -50px;
+}
+
+div.ui-datepicker-header a.ui-state-disabled {
+    visibility: hidden;
+}
+
+div.ui-datepicker-header {
+    margin: 0 0 12px;
+    height: 42px;
+    position: relative;
+}
+
+div.ui-datepicker-title {
+    font-weight: bold;
+    margin: 0 0 9px 0;
+    position: absolute;
+    top: 19px;
+    left: 72px;
+}
+
+div.ui-datepicker-header a.ui-datepicker-prev,
+div.ui-datepicker-header a.ui-datepicker-next {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: auto;
+    float: none;
+    margin: 0;
+}
+
+div.ui-datepicker-header a.ui-datepicker-next {
+    right: 0;
+    left: auto;
+}
+
+#ui-datepicker-div {
+    background: #fefefe;
+    padding: 9px 18px;
+    width: auto !important;
+    display: none;
+    width: 308px !important;
+    height: 267px;
+    background: url(../img/datepicker.png) no-repeat;
+    _background-image: url(../img/datepicker.gif);
+}
+
+#ui-datepicker-div select {
+    width: 80px;
+    border: solid 1px #d8dadc;
+    background: #ffffff;
+    padding: 0;
+}
+
+#ui-datepicker-div select.ui-datepicker-month {
+    margin: 0 6px 0 0;
+}
+
+div.ui-datepicker-group {
+    float: left;
+    margin: 0 5px 0 0;
+}
+
+table.ui-datepicker-calendar,
+table.calendar {
+    border-collapse: collapse;
+    margin: 0 0 11px 0;
+}
+
+table.ui-datepicker-calendar tr th,
+table.calendar tr th {
+    font-size: 11px;
+    color: #656162;
+    font-weight: normal;
+    text-align: left;
+    padding: 0 0 6px 3px;
+    color: #5e676c;
+}
+
+table.ui-datepicker-calendar tr td,
+table.calendar tr td {
+    padding: 0 2px 1px 2px;
+}
+
+table.ui-datepicker-calendar tr td.ui-state-disabled span,
+table.ui-datepicker-calendar tr td a,
+table.calendar tr td a {
+    display: block;
+    width: 26px;
+    height: 22px;
+    color: #7d7b7c;
+    background: url(../img/calendar-cell.png) no-repeat;
+    background-position: 0px -50px;
+    font-size: 11px;
+    padding: 2px 7px;
+}
+
+table.ui-datepicker-calendar tr td.ui-state-disabled span {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+table.calendar tr td.marked a {
+    color: #656061;
+    background-position: 0px -100px;
+}
+
+table.ui-datepicker-calendar td a:hover,
+table.calendar td.marked a:hover,
+table.calendar td a:hover {
+    color: #ffffff;
+    text-decoration: none;
+    background-position: 0px -150px;
+}
+
+table.ui-datepicker-calendar td.ui-datepicker-unselectable,
+table.calendar td.empty a,
+table.calendar td.empty a:hover {
+    color: #ffffff;
+    background-position: 0px 0px;
+}
+
+/* verifiers */
+
+#content ul.verifiers {
+    overflow: hidden;
+    float: right;
+    margin: 0 0 25px;
+}
+
+#content ul.verifiers li {
+    display: block;
+    float: left;
+    height: 80px;
+    text-indent: -1000em;
+    overflow: hidden;
+}
+
+#content ul.verifiers li a {
+    display: block;
+    height: 80px;
+}
+
+#content ul.verifiers li.nil {
+    width: 121px;
+    margin: 0 30px 0 0;
+    background: url(../img/v-nil.png) no-repeat;
+}
+
+#content ul.verifiers li.nil a {
+    width: 121px;
+}
+
+#content ul.verifiers li.netdoctor {
+    width: 96px;
+    background: url(../img/v-netdoctor.png) no-repeat;
+    margin: 0 14px 0 0;
+}
+
+#content ul.verifiers li.netdoctor a {
+    width: 96px;
+}
+
+/* sticky footer */
+html, body, form {
+    height: 100%;
+}
+
+#wrapper {
+    margin-bottom: -136px;
+    min-height: 100%;
+}
+
+#push {
+    height: 136px;
+}
+
+/* calendarium */
+#wrapper #content h3.date {
+    overflow: hidden;
+    line-height: normal;
+    margin: 0 0 2px 0;
+    font-size: 16px;
+}
+
+#wrapper #content h3.date cite {
+    line-height: normal;
+    font-size: 34px;
+    color: #990000;
+    font-weight: bold;
+    float: left;
+    display: block;
+    font-style: normal;
+    margin: 0;
+}
+
+#wrapper #content h3.date span {
+    font-size: 14px;
+    display: block;
+    float: left;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #bb5161;
+    padding: 5px 0;
+}
+
+#content ul.calendarium li {
+    border-top: solid 1px #d9d9d9;
+    padding: 16px 0 11px;
+}
+
+#content ul.calendarium dl.address {
+    width: 331px;
+    height: 56px;
+    background: url(../img/calendar-address.png) no-repeat;
+    padding: 10px 15px;
+    margin: 0 0 9px;
+}
+
+#content ul.calendarium dl.address dt,
+#content ul.calendarium dl.address dd {
+    float: left;
+    margin: 0 0 3px 0;
+}
+
+#content ul.calendarium dl.address dt {
+    clear: left;
+    width: 121px;
+}
+
+/* mask + popup */
+#mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    opacity: 0.5;
+    z-index: 999;
+    display: none;
+    filter: alpha(opacity=50);
+}
+
+#popup {
+    width: 640px;
+    position: absolute;
+    left: 50%;
+    margin: 0 0 0 -320px;
+    top: 200px;
+    background: url(../img/popup-top.png) no-repeat;
+    background-position: left top;
+    padding: 45px 0 0 0;
+    z-index: 1000;
+    display: none;
+    overflow: hidden;
+}
+
+#popup div.content {
+    width: 640px;
+    background: url(../img/popup-bottom.png) no-repeat;
+    background-position: left bottom;
+    padding: 0 0 25px 0;
+}
+
+#popup div.content div.body {
+    background: url(../img/popup-bg.png) repeat-y;
+    padding: 0 50px 25px 44px;
+    overflow: hidden;
+}
+
+#popup a.close {
+    width: 26px;
+    height: 26px;
+    background: url(../img/popup-close.png) no-repeat;
+    text-indent: -1000em;
+    overflow: hidden;
+    position: absolute;
+    top: 12px;
+    right: 13px;
+}
+
+#popup a.close:hover {
+    background-position: left -26px;
+}
+
+/* --------------------------- */
+body {
+    background: #ffffff url(../img/bg2.png) repeat-x;
+    font-size: 12px;
+    line-height: 16px;
+    color: #333333;
+}
+
+#wrapper {
+    background: url(../img/bg-top2.png) no-repeat;
+    background-position: center top;
+}
+
+body.main {
+    background: #ffffff url(../img/bg.png) repeat-x;
+}
+
+body.main #wrapper {
+    background-image: url(../img/bg-top.png);
+}
+
+body.main2 {
+    background: #ffffff url(../img/bg3.png) repeat-x;
+}
+
+body.main2 #wrapper {
+    background-image: url(../img/bg-top3.png);
+}
+
+body.main3 {
+    background: #ffffff url(../img/bg4.png) repeat-x;
+}
+
+body.main3 #wrapper {
+    background-image: url(../img/bg-top4.png);
+}
+
+#wrapper #top,
+#wrapper #content,
+#wrapper div.footer,
+#footer div.content,
+#footer ul.pipes {
+    width: 978px;
+    margin: 0 auto;
+}
+
+#top {
+    height: 390px;
+    position: relative;
+    overflow: hidden;
+}
+
+#top #menu {
+    text-align: right;
+    margin: 13px 17px 18px 0;
+}
+
+#top #menu li {
+    color: #d13440;
+    font-size: 11px;
+}
+
+#top #menu li a {
+    color: #dddddd;
+    font-size: 11px;
+    padding: 0 8px !important;
+}
+
+#top #menu li a span {
+    font-size: 13px;
+}
+
+#top #logo {
+    margin: 0 0 0 -2px;
+}
+
+#top #logo,
+#top #logo a {
+    width: 147px;
+    height: 57px;
+    clear: right;
+}
+
+#top #tabs {
+    margin: -5px 0 0;
+}
+
+#top #tabs li a {
+    height: 58px;
+    line-height: 58px;
+    padding: 0 16px;
+    font-size: 20px;
+}
+
+#top h1,
+#top h2 {
+    font-family: MyriadPro, Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    color: #ffffff;
+    font-weight: normal;
+    clear: both;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.75);
+    position: relative;
+    top: 88px;
+    line-height: 28px;
+}
+
+#top h2 {
+    font-size: 23px;
+}
+
+#top h1 strong,
+#top h1 em {
+    font-size: 22px;
+    color: #dcdcdc;
+    font-style: normal;
+    display: block;
+}
+
+#top h1 strong {
+    font-weight: bold;
+    margin: -3px 0 0 0;
+}
+
+#top #cockpit {
+    width: 451px;
+    height: 225px;
+    background: url(../img/cockpit.png) no-repeat;
+    position: absolute;
+    right: 28px;
+    bottom: -4px;
+}
+
+#content {
+    overflow: hidden;
+}
+
+#popup h2,
+#content div.column-left div.left h2,
+#content div.column-left div.right h2,
+#content div.column-right h2,
+#content ul.breadcrumbs {
+    display: block;
+    border-bottom: solid 4px #bb5161;
+    padding: 0 0 10px;
+    margin: 0 0 19px;
+}
+
+#content ul.breadcrumbs li,
+#content ul.breadcrumbs li a {
+    color: #999999;
+    font-size: 11px;
+}
+
+#popup h2,
+#content h2 {
+    font-size: 30px;
+    font-family: MyriadPro, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    color: #000c12;
+    line-height: normal;
+}
+
+#content div.form h3 {
+    margin: 15px 0 10px;
+}
+
+#content div.form h3.first,
+#content h3 {
+    font-size: 16px;
+    color: #990000;
+    margin: 0 0 10px;
+}
+
+#content h4 {
+    font-size: 13px;
+    margin: 0 0 4px;
+}
+
+#content h5 {
+    font-size: 12px;
+}
+
+#content ul.list,
+#wrapper #content ul.list-big li p,
+#content p {
+    margin: 0 0 16px;
+}
+
+#content ul.list li p {
+    margin: 0;
+}
+
+#content ul.list li {
+    color: #dd5151;
+    margin: 0 0 0 30px;
+}
+
+#content ul.list li table th,
+#content ul.list li table td {
+    color: #333333;
+}
+
+#content ul.list li strong,
+#content ul.list li p {
+    color: #333333;
+}
+
+#content div.column-left {
+    margin: 0 30px 0 0;
+    width: 642px;
+}
+
+#content div.column-right {
+    width: 306px;
+}
+
+#content div.column-content table {
+    border-collapse: collapse;
+    margin: 0 0 30px 30px;
+    width: 523px;
+}
+
+#content div.column-left ul.list li table {
+    margin: 0 0 30px 0;
+}
+
+#content div.column-content table th,
+#content div.column-content table td {
+    font-weight: bold;
+    vertical-align: middle;
+    text-align: center;
+    line-height: normal;
+}
+
+#content div.column-content table thead {
+    background: url(../img/th.png) repeat-y;
+}
+
+#content div.column-content table tbody {
+    background: url(../img/td.png) repeat-y;
+}
+
+#content div.column-content table th {
+    border: solid 1px #ffffff;
+    font-size: 15px;
+    padding: 7px;
+}
+
+#content div.column-content table td {
+    border-right: solid 1px #ffffff;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+    font-size: 13px;
+    padding: 2px 10px;
+    white-space: nowrap;
+}
+
+#content div.column-left div.left h2,
+#content div.column-left div.right h2,
+#content div.column-right h2 {
+    font-size: 25px;
+    margin: 26px 0 15px;
+    padding: 0 0 8px;
+}
+
+#content div.column-left div.cal,
+#content div.column-right div.cal {
+    overflow: hidden;
+    height: 218px;
+    position: relative;
+}
+
+#content div.column-left div.calendars,
+#content div.column-right div.calendars {
+    width: 918px;
+    left: -306px;
+    position: absolute;
+}
+
+#content div.column-left div.calendars div.c-left,
+#content div.column-right div.calendars div.c-left {
+    width: 306px;
+}
+
+#content div.column-left div.calendars div.c-left a.cal-more,
+#content div.column-right div.calendars div.c-left a.cal-more {
+    display: none;
+}
+
+
+#content div.column-left table tr.bb td {
+    border-bottom: solid 1px #ffffff;
+}
+
+#wrapper div.footer {
+    margin: 80px auto 0;
+}
+
+#wrapper div.footer ul li {
+    color: #cdcdcd;
+}
+
+#wrapper div.footer ul li a {
+    color: #990000;
+}
+
+#wrapper div.top-login {
+    height: 134px;
+}
+
+#wrapper div.top-login #logo {
+    margin: 48px 0 0 -2px;
+    float: left;
+}
+
+#wrapper div.top-login h1 {
+    float: left;
+    clear: none;
+    position: static;
+    margin: 64px 0 0 52px;
+}
+
+#wrapper div.content-login {
+    width: 644px !important;
+    margin: 0 auto !important;
+}
+
+#login {
+    width: 584px;
+    height: 212px;
+    background: url(../img/login.png) no-repeat;
+    padding: 28px 30px;
+    margin: 0 0 20px;
+}
+
+#login p {
+    font-weight: bold;
+    margin: 0 0 30px;
+}
+
+#wrapper div.content-login p.first {
+    margin: 30px 0 25px;
+}
+
+#content div.column-left div.left,
+#content div.column-left div.right {
+    width: 306px;
+    float: left;
+}
+
+#content div.column-left div.left {
+    margin: 0 30px 0 0;
+}
+
+#wrapper div.main-top h1 {
+    width: 239px;
+    height: 57px;
+    text-indent: -1000em;
+    overflow: hidden;
+    background: url(../img/fraxiparine-text.png) no-repeat;
+    top: 70px;
+    left: 483px;
+}
+
+#wrapper div.main-top #cockpit {
+    width: 383px;
+    height: 217px;
+    background: url(../img/cockpit2.png) no-repeat;
+    bottom: 27px;
+    left: 42px;
+    right: auto;
+}
+
+#wrapper div.main-top #cockpit a {
+    display: block;
+    overflow: hidden;
+    text-indent: -1000em;
+    width: 206px;
+    height: 70px;
+    position: absolute;
+    bottom: 0px;
+    left: 88px;
+}
+
+#wrapper div.main-top h2 {
+    margin: -13px 0 0 483px;
+}
+
+#content dl.smallform {
+    background: url(../img/expert.png) no-repeat;
+    background-position: right 2px;
+}
+
+#content dl.smallform dt {
+    font-size: 12px;
+    color: #990000;
+    font-weight: bold;
+    margin: 0 0 8px;
+}
+
+#content dl.smallform dd {
+    margin: 0 0 13px;
+}
+
+#content dl.smallform input.text {
+    background-image: url(../img/longinput.png);
+    width: 288px;
+}
+
+#content dl.smallform textarea {
+    padding: 5px 9px;
+    width: 288px;
+    height: 76px;
+    min-width: 288px;
+    min-height: 76px;
+    max-width: 288px;
+    max-height: 76px;
+    resize: none;
+    border: none;
+    background: url(../img/longtextarea.png) no-repeat;
+}
+
+#content dl.smallform textarea:focus {
+    background-position: left -86px;
+}
+
+#content div.column-left div.right h3 {
+    margin: 0;
+    font-size: 14px;
+}
+
+#content div.column-left div.right cite {
+    font-size: 10px;
+    display: block;
+    color: #999999;
+    margin: 0 0 5px;
+}
+
+body.main2 #content,
+body.main3 #content {
+    padding: 0 0 60px;
+}
+
+body.main3 #top {
+    height: 173px;
+}
+
+#content h3.top {
+    font-family: MyriadPro, Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    color: #333333;
+    font-weight: normal;
+    margin: 0 0 18px;
+}
+
+#content h3.top cite {
+    display: block;
+    font-size: 15px;
+    color: #999999;
+    float: none;
+    margin: 5px 0 0;
+}
+
+body.main3 div.form {
+    padding: 20px 0 0 0;
+    margin: -10px 0 0;
+    background: url(../img/surgeon-tab.png) no-repeat;
+    background-position: right top;
+}
+
+body.main3 div.form cite {
+    display: block;
+    margin: 0;
+    width: 151px;
+    font-size: 11px;
+    color: #8a8a8a;
+}
+
+body.main3 div.form button {
+    margin: 0;
+}
+
+body.main3 #content div.form p {
+    margin: 10px 0 15px 151px;
+}
+
+body.main3 #wrapper #content {
+    margin: -11px auto 0;
+    padding: 11px 0 80px;
+}
+
+#content div.ad {
+    padding: 112px 0 0 0;
+    background: url(../img/ad-top.png) no-repeat;
+    margin: -11px 0 47px;
+}
+
+#content div.ad a {
+    display: block;
+    height: 60px;
+    text-indent: -1000em;
+    overflow: hidden;
+    background: url(../img/ad-bottom.png) no-repeat;
+}
+
+#content ul.downloads li {
+    width: 207px;
+    height: 280px;
+    float: left;
+    margin: 0 0 0 9px;
+}
+
+#content ul.downloads li.online {
+    margin: 0;
+}
+
+#content ul.downloads li a {
+    display: block;
+    width: 185px;
+    height: 41px;
+    background: url(../img/download-button.png) no-repeat;
+    font-weight: bold;
+    font-size: 13px;
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+    padding: 239px 11px 0;
+}
+
+#content ul.downloads li a strong,
+#content ul.downloads li a em {
+    color: #ffffff;
+    font-family: MyriadPro, Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: normal;
+    font-style: normal;
+    display: block;
+    position: absolute;
+    top: 13px;
+    left: 16px;
+    line-height: normal;
+}
+
+#content ul.downloads li a em {
+    font-size: 15px;
+    top: 39px;
+}
+
+#content ul.downloads li a:hover {
+    background-position: left -280px;
+}
+
+#content ul.downloads li ul.platforms {
+    position: absolute;
+    right: 25px;
+    bottom: 73px;
+    width: 50px;
+}
+
+#content ul.downloads li ul.platforms li {
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-indent: -1000em;
+    overflow: hidden;
+    float: none;
+}
+
+#content ul.downloads li ul.platforms li.ie {
+    background: url(../img/dl-ie.png) no-repeat;
+}
+
+#content ul.downloads li ul.platforms li.fx {
+    background: url(../img/dl-fx.png) no-repeat;
+}
+
+#content ul.downloads li ul.platforms li.sf {
+    background: url(../img/dl-sf.png) no-repeat;
+}
+
+#content ul.downloads li ul.platforms li.win {
+    background: url(../img/dl-win.png) no-repeat;
+}
+
+#content ul.downloads li ul.platforms li.mac {
+    background: url(../img/dl-mac.png) no-repeat;
+}
+
+#popup p {
+    margin: 0 0 25px;
+}
+
+#popup a.cancel {
+    display: block;
+    height: 27px;
+    line-height: 27px;
+    margin: 0 0 0 40px;
+    float: left;
+}
+
+#footer div.footer {
+    border-top: solid 1px #e6e6e6;
+    background: #f2f2f2;
+    margin: 9px 0 0 0;
+    padding: 12px 0 43px 0;
+}
+
+#footer div.footer div.content {
+    color: #7b7b7b;
+}
+
+#footer div.footer address {
+    margin: 0 0 10px 0;
+}
+
+#footer div.footer address span {
+    float: right;
+}
+
+#footer div.footer a {
+    color: #c77b7b;
+}
+
+#footer div.footer ul.pipes li a {
+    color: #990000;
+}
+
+#footer div.footer a.gsk {
+    display: block;
+    width: 79px;
+    height: 29px;
+    overflow: hidden;
+    text-indent: -1000em;
+    background: url(../img/gsk.png) no-repeat;
+}

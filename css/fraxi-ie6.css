@@ -1,0 +1,194 @@
+#wrapper {
+    height: 100%;
+}
+
+button.submit,
+a.submit {
+    background-image: url(../img/button-right.gif);
+    -ie-xp: expression(
+              this.parsed ? 0 :(
+                this.onmouseover = new Function("this.className += ' submit-hover'"),
+                this.onmouseout = new Function("this.className = this.className.replace(' submit-hover','')"),
+              this.parsed = 1)
+            );
+    overflow: visible;
+}
+
+a.submit {
+    overflow: hidden;
+}
+
+button {
+    overflow: visible !important;
+}
+
+button.submit div,
+a.submit span {
+    background-image: url(../img/button-left.gif);
+    float: left;
+}
+
+button.submit-hover {
+    background-position: right -25px;
+    cursor: pointer;
+}
+
+button.submit-hover div {
+    background-position: left -25px;
+}
+
+ul li {
+    -ie-xp: expression(
+        this.parsed ? 0 : (
+            this.className += ((this == this.parentNode.firstChild) ? " first-child" :""),
+            this.className += ((this == this.parentNode.lastChild) ? " last-child" :""),
+            this.parsed = 1
+        )
+    );
+}
+
+ul.breadcrumbs li {
+    -ie-xp: expression(
+        this.parsed ? 0 : (
+            this == this.parentNode.firstChild ? 0 : this.innerHTML = " / " + this.innerHTML,
+            this.parsed = 1
+        )
+    )
+}
+
+ul.pipes li {
+    -ie-xp: expression(
+        this.parsed ? 0 : (
+            this == this.parentNode.firstChild ? 0 : this.innerHTML = " | " + this.innerHTML,
+            this.parsed = 1
+        )
+    )
+}
+
+#top #logo,
+#top #logo a {
+    background-image: none;
+}
+
+#top #logo a {
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/img/logo.png",sizingMethod="crop");
+}
+
+#top #cockpit {
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/img/cockpit.png",sizingMethod="crop");
+}
+
+#wrapper div.main-top #cockpit {
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/img/cockpit2.png",sizingMethod="crop");
+}
+
+#wrapper div.main-top h1 {
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/img/fraxiparine-text.png",sizingMethod="crop");
+}
+
+#tabs {
+    -ie-xp: expression(
+        this.parsed ? 0 : (
+            lis = this.getElementsByTagName('li'),
+            w = 0,
+            w += (lis.length > 0 ? lis[0].offsetWidth : 0),
+            w += (lis.length > 1 ? lis[1].offsetWidth : 0),
+            w += (lis.length > 2 ? lis[2].offsetWidth : 0),
+            w += (lis.length > 3 ? lis[3].offsetWidth : 0),
+            w += (lis.length > 4 ? lis[4].offsetWidth : 0),
+            w += (lis.length > 5 ? lis[5].offsetWidth : 0),
+            w += (lis.length > 6 ? lis[6].offsetWidth : 0),
+            w += (lis.length > 7 ? lis[7].offsetWidth : 0),
+            w += (lis.length > 8 ? lis[8].offsetWidth : 0),
+            w += (lis.length > 9 ? lis[9].offsetWidth : 0),
+            this.style.width = w.toString() + 'px',
+            this.parsed = 1
+        )
+    );
+}
+
+#tabs li a {
+    background-image: url(../img/tabs.gif);
+    float: left;
+}
+
+#footer div.footer a.gsk {
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/img/gsk.png",sizingMethod="crop");
+}
+
+#login {
+    background-image: url(../img/login.gif);
+}
+
+#login button.submit {
+    margin: 0 0 0 75px;
+}
+
+#content div.column-left div.calendars div.c-left, #content div.column-right div.calendars div.c-left {
+    overflow: hidden;
+}
+
+body.main2 #top #tabs {
+    background-image: url(../img/tabs-main2.png);
+}
+
+body.main3 #top #tabs {
+    background-image: url(../img/tabs-main3.png);
+}
+
+#content div.ad {
+    position: relative;
+    zoom: 1;
+}
+
+#content div.column-left div.left,
+#content div.column-left div.right {
+    overflow: hidden;
+}
+
+#content ul.downloads li ul.platforms li.ie {
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/img/dl-ie.png",sizingMethod="crop");
+}
+
+#content ul.downloads li ul.platforms li.fx {
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/img/dl-fx.png",sizingMethod="crop");
+}
+
+#content ul.downloads li ul.platforms li.sf {
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/img/dl-sf.png",sizingMethod="crop");
+}
+
+#content ul.downloads li ul.platforms li.win {
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/img/dl-win.png",sizingMethod="crop");
+}
+
+#content ul.downloads li ul.platforms li.mac {
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/img/dl-mac.png",sizingMethod="crop");
+}
+
+#popup div.content {
+    padding: 0 0 23px;
+}
+
+#popup {
+    _background-image: url(../img/popup-top.gif);
+}
+
+#popup div.content {
+    _background-image: url(../img/popup-bottom.gif);
+}
+
+#popup div.content div.body {
+    _background-image: url(../img/popup-bg.gif);
+}
+
